@@ -2,27 +2,64 @@
 
 ## Project Overview
 This project is a simple Vehicle Management System written in Java.
-It demonstrates basic Object-Oriented Programming concepts such as
-inheritance, abstraction, composition, and method overriding.
+It demonstrates Object-Oriented Programming concepts such as inheritance,
+abstraction, composition, aggregation, and method overriding.
+
+The project and assignment can be viewed through the GitHub repository.
+
+---
 
 ## Class Hierarchy
-Vehicle is an abstract superclass that contains common fields and methods.
-Car, Motorcycle, and Truck extend the Vehicle class and override the
-startEngine() and stopEngine() methods.
+Vehicle is an abstract superclass.
+Car, Motorcycle, and Truck extend the Vehicle class and override engine methods.
 
-Protected access modifier is used so subclasses can access vehicle data.
-The super keyword is used to call the parent class constructor.
+Protected access modifiers are used for subclass access,
+and the `super` keyword is used for constructor chaining.
+
+---
 
 ## Driver Association
-Each Vehicle has a Driver object (composition).
+Each Vehicle is associated with a Driver object (composition).
 One Driver can be assigned to multiple Vehicle objects (aggregation).
 
+---
+
+## Main Program
+All vehicles are stored in a `Vehicle[]` array.
+A loop is used to start engines, display vehicle and driver information,
+and stop engines, demonstrating polymorphism.
+
+---
+
 ## How to Compile and Run
-Open the project in IntelliJ IDEA.
-Run the Main.java file using the green Run button.
+
+### Using Terminal
+
+javac *.java
+
+java Main
+
+Open the project and run Main.java.
+
+---
+
+## Screenshots
+
+Screenshots of the program output and project structure
+are located in the `docs/screenshots` folder.
+
+
+---
 
 ## Reflection
-Inheritance helped simplify the design by placing common functionality
-in the Vehicle class. Method overriding allowed each vehicle type to
-have its own engine behavior. The main challenge was understanding
-abstract classes and how protected fields work.
+
+Inheritance simplified the design of the system by placing common vehicle
+properties and behaviors in the abstract Vehicle class. This reduced
+code duplication and made the project easier to maintain and extend.
+
+Method overriding allowed each vehicle type to define its own engine behavior
+while still being processed through a common Vehicle array. The main
+challenge during implementation was understanding abstract classes,
+constructor chaining with super(), and the correct use of protected
+access modifiers.
+

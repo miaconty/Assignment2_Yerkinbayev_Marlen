@@ -9,8 +9,8 @@ public class Driver {
     }
 
     public void displayDriverInfo() {
-        System.out.println("Driver name: " + name);
-        System.out.println("License number: " + licenseNumber);
+        System.out.println("Driver: " + name + ", License: " + licenseNumber);
     }
 }
+
 
